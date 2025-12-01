@@ -1,0 +1,100 @@
+<x-app-layout>
+    <style>
+        /* Reuse theme from create view */
+        nav { background-color: transparent !important; backdrop-filter: none !important; border-bottom: none !important; box-shadow: none !important; position: absolute; width: 100%; z-index: 50; }
+        nav .shrink-0, nav .shrink-0 a, nav .shrink-0 svg { display: none !important; }
+        nav .text-gray-500, nav .text-gray-800, nav a, nav button { color: #e2e8f0 !important; }
+        .min-h-screen.bg-gray-100 { background-color: #0f172a !important; }
+        .glass-dark { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(56, 189, 248, 0.2); }
+        input, select { background-color: #1e293b !important; border: 1px solid #334155 !important; color: white !important; }
+        input:focus, select:focus { border-color: #06b6d4 !important; box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2) !important; }
+        .input-error { border-color: #f87171 !important; }
+    </style>
+
+    <div class="pt-24 pb-12 min-h-screen bg-[#0f172a] relative">
+        <div class="max-w-3xl mx-auto sm:px-6 lg:px-8 relative z-10">
+            <div class="mb-6 flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="p-3 bg-slate-800/50 rounded-xl border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <a href="{{ route('admin.siswa.index') }}" class="text-cyan-400 hover:text-cyan-300 text-sm mb-1 inline-block transition-transform hover:-translate-x-1">&larr; Kembali</a>
+                        <h2 class="text-3xl font-bold text-white">Edit Data Siswa</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-dark rounded-2xl p-8">
+                <form action="{{ route('admin.siswa.update', $siswa->id) }}" method="POST">
+                    @csrf
+                    @method('PATCH')
+
+                    <div class="mb-6 border-b border-slate-700 pb-4">
+                        <h3 class="text-cyan-400 font-bold mb-4 uppercase tracking-wider text-sm">1. Informasi Akun</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-slate-400 mb-2 text-sm">Nama Lengkap</label>
+                                <input type="text" name="name" value="{{ old('name', $siswa->user->name) }}" class="w-full rounded-lg px-4 py-2 @error('name') input-error @enderror" required>
+                                @error('name')<p class="text-red-400 text-xs mt-1">{{ $message }}</p>@enderror
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 mb-2 text-sm">Email</label>
+                                <input type="email" name="email" value="{{ old('email', $siswa->user->email) }}" class="w-full rounded-lg px-4 py-2 @error('email') input-error @enderror" required>
+                                @error('email')<p class="text-red-400 text-xs mt-1">{{ $message }}</p>@enderror
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-cyan-400 font-bold mb-4 uppercase tracking-wider text-sm">2. Biodata Sekolah</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                            <div>
+                                <label class="block text-slate-400 mb-2 text-sm">NISN (Angka Saja)</label>
+                                <input type="text" name="nisn" value="{{ old('nisn', $siswa->nisn) }}" class="w-full rounded-lg px-4 py-2 font-mono @error('nisn') input-error @enderror" required inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                                @error('nisn')<p class="text-red-400 text-xs mt-1">{{ $message }}</p>@enderror
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 mb-2 text-sm">Nomor HP (Angka Saja)</label>
+                                <input type="text" name="nomor_hp" value="{{ old('nomor_hp', $siswa->nomor_hp) }}" class="w-full rounded-lg px-4 py-2 font-mono @error('nomor_hp') input-error @enderror" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                                @error('nomor_hp')<p class="text-red-400 text-xs mt-1">{{ $message }}</p>@enderror
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-slate-400 mb-2 text-sm">Kelas</label>
+                                <select name="kelas" class="w-full rounded-lg px-4 py-2 @error('kelas') input-error @enderror">
+                                    <option value="">-- Pilih Kelas --</option>
+                                    <option value="X" {{ old('kelas', $siswa->kelas) == 'X' ? 'selected' : '' }}>Kelas X</option>
+                                    <option value="XI" {{ old('kelas', $siswa->kelas) == 'XI' ? 'selected' : '' }}>Kelas XI</option>
+                                    <option value="XII" {{ old('kelas', $siswa->kelas) == 'XII' ? 'selected' : '' }}>Kelas XII</option>
+                                </select>
+                                @error('kelas')<p class="text-red-400 text-xs mt-1">{{ $message }}</p>@enderror
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 mb-2 text-sm">Jurusan</label>
+                                <select name="jurusan" class="w-full rounded-lg px-4 py-2 @error('jurusan') input-error @enderror">
+                                    <option value="">-- Pilih Jurusan --</option>
+                                    <option value="RPL" {{ old('jurusan', $siswa->jurusan) == 'RPL' ? 'selected' : '' }}>Rekayasa Perangkat Lunak</option>
+                                    <option value="TKJ" {{ old('jurusan', $siswa->jurusan) == 'TKJ' ? 'selected' : '' }}>Teknik Komputer Jaringan</option>
+                                    <option value="DKV" {{ old('jurusan', $siswa->jurusan) == 'DKV' ? 'selected' : '' }}>Desain Komunikasi Visual</option>
+                                    <option value="AKL" {{ old('jurusan', $siswa->jurusan) == 'AKL' ? 'selected' : '' }}>Akuntansi</option>
+                                    <option value="OTKP" {{ old('jurusan', $siswa->jurusan) == 'OTKP' ? 'selected' : '' }}>Otomatisasi Tata Kelola Perkantoran</option>
+                                </select>
+                                @error('jurusan')<p class="text-red-400 text-xs mt-1">{{ $message }}</p>@enderror
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-end mt-8">
+                        <button type="submit" class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-3 px-8 rounded-xl shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all transform hover:scale-105">Simpan Perubahan</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</x-app-layout>
