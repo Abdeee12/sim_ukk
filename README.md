@@ -91,7 +91,6 @@ php artisan storage:link
 6) Jalankan server
 
 ```powershell
-npm run dev
 php artisan serve --host=127.0.0.1 --port=8000
 # buka http://127.0.0.1:8000
 ```
