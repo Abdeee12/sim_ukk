@@ -1,4 +1,4 @@
-# QUICKSTART — Menjalankan proyek secara lokal
+﻿# QUICKSTART  Menjalankan proyek secara lokal
 
 Langkah cepat untuk menjalankan dan menguji proyek di mesin development (Windows / PowerShell):
 
@@ -7,7 +7,7 @@ Langkah cepat untuk menjalankan dan menguji proyek di mesin development (Windows
 ```powershell
 composer install
 npm install
-npm run build   # atau npm run dev untuk mode development
+npm run build   # atau `npm run dev` untuk mode development
 ```
 
 2) Buat symlink storage (agar file upload dapat diakses)
