@@ -55,7 +55,7 @@ Instalasi
 1) Clone repository
 
 ```powershell
-git clone <repository-url>
+git clone (https://github.com/Abdeee12/sim_ukk)
 cd simm_ukk
 ```
 
