@@ -1,59 +1,98 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Dokumentasi Proyek Primary School
+Konsep Dari Web Yang Saya Buat
+Primary School adalah website Daftar Ulang Penerimaan Peserta Didik Baru (PPDB) tingkat Sekolah Dasar (SD) yang dirancang untuk memudahkan proses daftar ulang siswa baru secara online. Primary School bertujuan untuk memberikan pengalaman daftar ulang yang lebih cepat, efisien, dan transparan, sehingga seluruh proses penerimaan siswa baru dapat berjalan dengan lancar tanpa harus datang langsung ke sekolah.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Fitur Yang Tersedia
+Halaman Awal
+Home
+About
+Frequently Asked Questions
+Contact
+Authentication
+Register
+Login
+Multi User
+Admin
+Mengelola Peserta
+Melihat semua data
+Peserta
+Mengakses Halaman Awal tanpa Login
+Mengakses Halaman Awal setelah Login
+Login sebagai Peserta
+Mengisi Formulir Daftar Ulang
+Print Formulir Daftar Ulang
+Mengisi Formulir Join Ekstrakurikuler
+All
+Login
+Logout
+Akun Default
+Admin:
+Email: admin@example.com
+Password: password123
+Peserta:
+Nama Lengkap: Peserta
+Nomor Pendaftaran: 911911
+ERD
+![erd abde](https://github.com/user-attachments/assets/1d35b791-e6d9-4e53-8d68-0f9ecddbd66c)
 
-## About Laravel
+ERD
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+UML
+UML
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Teknologi yang Digunakan
+Laravel 8
+Tools yang Digunakan
+Laragon
+VSCode
+Navicat
+Persyaratan untuk Instalasi
+PHP 7.4.33
+Web Server
+Database (MySQL)
+Web Browser
+Cara Instalasi IceSicle
+1. Persyaratan
+Pastikan terlebih dulu Anda memenuhi persyaratan berikut:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+PHP versi 7.4.33
+Web Server (Apache)
+Database (MySQL)
+Web Browser
+2. Clone Repository
+Pertama, clone repository dari GitHub dengan perintah berikut:
 
-## Learning Laravel
+git clone https://github.com/azmiakh/ujikom.git
+3. Masuk ke Direktori Proyek
+Setelah clone selesai, masuk ke direktori proyek:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+cd ujikom
+4. Instalasi Dependensi
+Instal dependensi menggunakan Composer:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+composer install
+5. Salin File .env
+Salin file '.env.example' menjadi '.env':
 
-## Laravel Sponsors
+cp .env.example .env
+6. Atur Kunci Aplikasi
+Generate kunci aplikasi menggunakan Artisan:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+php artisan key:generate
+7. Konfigurasi Database
+Edit file '.env' dan atur konfigurasi database:
 
-### Premium Partners
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=username_database
+DB_PASSWORD=password_database
+8. Jalankan Migrations
+Jalankan perintah berikut untuk membuat tabel di database:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+php artisan migrate
+9. Jalankan Server
+Jalankan server lokal dengan perintah berikut:
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+php artisan serve
