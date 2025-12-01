@@ -34,13 +34,13 @@ UI/UX
 - Tema modern (dark theme support) menggunakan Tailwind CSS.
 - Responsif dan mobile-friendly.
 
-Teknologi
+Tools
 ---------
 
-- Backend: Laravel (PHP 8.2+)
-- Frontend: Blade + Tailwind CSS
-- Database: MySQL
-- Autentikasi: Laravel Breeze (atau scaffold serupa)
+- Laravel (PHP 8.2+)
+- Blade + Tailwind CSS
+- Xampp (MySQL)
+- Laravel Breeze 
 
 Persyaratan Sistem
 
@@ -91,17 +91,18 @@ php artisan storage:link
 6) Jalankan server
 
 ```powershell
+npm run dev
 php artisan serve --host=127.0.0.1 --port=8000
 # buka http://127.0.0.1:8000
 ```
 
-Default Akun (contoh)
+Default Akun 
 
 Gunakan skrip di folder `scripts/` untuk membuat akun contoh, atau buat manual melalui tinker/seed:
 
-- Admin: `admin@localhost` / `password123`
-- Mentor: `mentor1@localhost` / `password123`
-- Siswa: `siswa1@localhost` / `password123`
+- Admin: `admin@sekolah.sch.id` / `password123`
+- Mentor: `mentor1@perusahaan.com` / `password123`
+- Siswa: `abde@gmail.com` / `password123`
 
 Struktur Folder (ringkas)
 
@@ -166,8 +167,6 @@ ikan layar 2025-12-01 221605" src="https://github.com/user-attachments/assets/26
 <img width="648" height="966" alt="Cuplikan layar 2025-12-01 224527" src="https://github.com/user-attachments/assets/687d7616-9731-486c-ade5-209217dfcf7b" />
 <img width="1100" height="684" alt="Cuplikan layar 2025-12-01 232422" src="https://github.com/user-attachments/assets/c3214b11-c11b-4ec1-8d57-bc3a27e9bf8d" />
 
-
-Lihat `readme/ERD.md` untuk ringkasan tabel dan relasi utama (users, mentors, siswas, laporan_harians).
 
 Konfigurasi (.env contoh)
 
