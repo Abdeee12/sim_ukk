@@ -1,4 +1,4 @@
-# SIMM — Sistem Informasi Magang (README gaya CyberTask)
+# SIMM — Sistem Informasi Magang
 
 Deskripsi
 ---------
@@ -161,7 +161,7 @@ Fitur yang Telah Diimplementasikan
 - Skrip helper di `scripts/` untuk pembuatan akun dan penugasan mentor.
 
 Database & ERD
---------------
+<img width="1890" height="946" alt="Cuplikan layar 2025-12-01 221605" src="https://github.com/user-attachments/assets/2696d5bf-b395-4a53-a7e7-814634504650" />
 
 Lihat `readme/ERD.md` untuk ringkasan tabel dan relasi utama (users, mentors, siswas, laporan_harians).
 
