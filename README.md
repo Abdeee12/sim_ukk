@@ -1,53 +1,61 @@
-Dokumentasi Proyek Primary School
+Dokumentasi SIMM (Sistem imformasi Managemen Magang)
 Konsep Dari Web Yang Saya Buat
-Primary School adalah website Daftar Ulang Penerimaan Peserta Didik Baru (PPDB) tingkat Sekolah Dasar (SD) yang dirancang untuk memudahkan proses daftar ulang siswa baru secara online. Primary School bertujuan untuk memberikan pengalaman daftar ulang yang lebih cepat, efisien, dan transparan, sehingga seluruh proses penerimaan siswa baru dapat berjalan dengan lancar tanpa harus datang langsung ke sekolah.
+SIMM adalah untuk mempermudah absen jurnal harian siswa maupun mahasiwa yang magang 
+di cyberlabs karena tidak sedikit siswa magang memilih untuk daring 
+maka dari itu saya membuat website jurnal harian pkl online
+
 
 Fitur Yang Tersedia
 Halaman Awal
 Home
-About
-Frequently Asked Questions
-Contact
+welcome
+
 Authentication
-Register
 Login
+
 Multi User
+
 Admin
-Mengelola Peserta
+
+Mengelola siswa
 Melihat semua data
-Peserta
-Mengakses Halaman Awal tanpa Login
+
+Mentor
+
+melihat data laporan siswa
+mengakses laporan siswa
+
+Siswa
+
 Mengakses Halaman Awal setelah Login
-Login sebagai Peserta
-Mengisi Formulir Daftar Ulang
-Print Formulir Daftar Ulang
-Mengisi Formulir Join Ekstrakurikuler
-All
-Login
-Logout
+Login sebagai siswa
+Mengisi Formulir jurnal harian
+
 Akun Default
 Admin:
-Email: admin@example.com
+Email: admin@sekolah.sch.id
 Password: password123
-Peserta:
-Nama Lengkap: Peserta
-Nomor Pendaftaran: 911911
+
+Mentor:
+Email:mentor@perusahaan.com
+Password:password123
+
+Siswa:
+Nama Lengkap: abde
+Email: abde@gmail.com
+Password: password123
 ERD
 ![erd abde](https://github.com/user-attachments/assets/1d35b791-e6d9-4e53-8d68-0f9ecddbd66c)
 
-ERD
-
-UML
-UML
 
 Teknologi yang Digunakan
-Laravel 8
+Laravel 11
 Tools yang Digunakan
-Laragon
+Xampp
 VSCode
 Navicat
 Persyaratan untuk Instalasi
-PHP 7.4.33
+PHP 8.5.0
 Web Server
 Database (MySQL)
 Web Browser
@@ -55,14 +63,14 @@ Cara Instalasi IceSicle
 1. Persyaratan
 Pastikan terlebih dulu Anda memenuhi persyaratan berikut:
 
-PHP versi 7.4.33
+PHP versi 8.5.0
 Web Server (Apache)
 Database (MySQL)
 Web Browser
 2. Clone Repository
 Pertama, clone repository dari GitHub dengan perintah berikut:
 
-git clone https://github.com/azmiakh/ujikom.git
+git clone https://github.com/abdeee12/sim_ukk
 3. Masuk ke Direktori Proyek
 Setelah clone selesai, masuk ke direktori proyek:
 
