@@ -164,7 +164,7 @@ Database,ERD,UML
 <img width="1890" height="946" alt="Cupl![Uploading Gemini_Generated_Image_l9yexwl9yexwl9ye.png…]()
 ikan layar 2025-12-01 221605" src="https://github.com/user-attachments/assets/2696d5bf-b395-4a53-a7e7-814634504650" />
 <img width="648" height="966" alt="Cuplikan layar 2025-12-01 224527" src="https://github.com/user-attachments/assets/687d7616-9731-486c-ade5-209217dfcf7b" />
-<img width="1100" height="684" alt="Cuplikan layar 2025-12-01 232422" src="https://github.com/user-attachments/assets/c3214b11-c11b-4ec1-8d57-bc3a27e9bf8d" />
+<img width="872" height="628" alt="Cuplikan layar 2025-12-02 145257" src="https://github.com/user-attachment
 
 Konfigurasi (.env contoh)
 
