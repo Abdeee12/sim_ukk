@@ -165,7 +165,7 @@ Database,ERD,UML
 ikan layar 2025-12-01 221605" src="https://github.com/user-attachments/assets/2696d5bf-b395-4a53-a7e7-814634504650" />
 <img width="648" height="966" alt="Cuplikan layar 2025-12-01 224527" src="https://github.com/user-attachments/assets/687d7616-9731-486c-ade5-209217dfcf7b" />
 <img width="1100" height="684" alt="Cuplikan layar 2025-12-01 232422" src="https://github.com/user-attachments/assets/c3214b11-c11b-4ec1-8d57-bc3a27e9bf8d" />
-
+![8ae2cb50-2e8b-4151-96e4-38b4aa7e3d58](https://github.com/user-attachments/assets/ed7dc976-6552-4a8c-863f-f9cc6482c9be)
 
 Konfigurasi (.env contoh)
 
