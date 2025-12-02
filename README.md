@@ -34,7 +34,7 @@ UI/UX
 - Tema modern (dark theme support) menggunakan Tailwind CSS.
 - Responsif dan mobile-friendly.
 
-Tools
+Tekhnologi
 ---------
 
 - Laravel (PHP 8.2+)
